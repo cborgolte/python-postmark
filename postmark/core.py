@@ -353,7 +353,7 @@ class PMMail(object):
                 if type(attachment) is tuple:
                     attachments.append({
                             "Name": attachment[0],
-                            "Content": attachment[1],
+                            "Content": attachment[1].encode('base64'),
                             "ContentType": attachment[2],
                             })
                 elif isinstance(attachment, MIMEBase):
